@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMAW Real-Time Quality Monitoring Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <header class="bg-white border-b border-slate-200 px-6 py-4 flex flex-wrap justify-between items-center shadow-sm">
+        <div>
+            <h1 class="text-2xl font-bold text-blue-600 tracking-wide">GMAW QUALITY MONITORING ENGINE</h1>
+            <p class="text-xs text-slate-500 mt-1">Interactive Production Manager Interface | 500 Component Log</p>
+        </div>
+        <div class="text-right text-xs text-slate-500 mt-2 md:mt-0">
+            <p class="font-semibold text-slate-700">UNIVERSITI TEKNIKAL MALAYSIA MELAKA</p>
+            <p>Course: BMIK 2124 | Instructor: Ts. Muhammad Khalis Bin Wahid</p>
+        </div>
+    </header>
+
+    <main class="p-6 max-w-7xl mx-auto space-y-8">
+
+        <section class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+            <h2 class="text-lg font-bold text-slate-700 mb-4 border-b pb-2 flex items-center gap-2">
+                <span>👥</span> Project Quality Assurance Engineering Team
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center hover:shadow-md transition-shadow">
+                    <img src="https://raw.githubusercontent.com/BaqiMahasan/BMIK2124/main/abdulbaqi.png" alt="Abdul Baqi" class="w-24 h-24 mx-auto rounded-full object-cover border-2 border-blue-500 bg-slate-200 mb-3" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80'">
+                    <p class="text-sm font-bold text-slate-700">Abdul Baqi</p>
+                    <p class="text-xs text-slate-400 font-medium tracking-wider uppercase mt-0.5">Electrical Engineer</p>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center hover:shadow-md transition-shadow">
+                    <img src="https://raw.githubusercontent.com/BaqiMahasan/BMIK2124/main/asyraf.png" alt="Mohamad Asyraf" class="w-24 h-24 mx-auto rounded-full object-cover border-2 border-blue-500 bg-slate-200 mb-3" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80'">
+                    <p class="text-sm font-bold text-slate-700">Mohamad Asyraf</p>
+                    <p class="text-xs text-slate-400 font-medium tracking-wider uppercase mt-0.5">Thermal Analyst</p>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center hover:shadow-md transition-shadow">
+                    <img src="https://raw.githubusercontent.com/BaqiMahasan/BMIK2124/main/izzat.png" alt="Muhammad Izzat" class="w-24 h-24 mx-auto rounded-full object-cover border-2 border-blue-500 bg-slate-200 mb-3" onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80'">
+                    <p class="text-sm font-bold text-slate-700">Muhammad Izzat</p>
+                    <p class="text-xs text-slate-400 font-medium tracking-wider uppercase mt-0.5">Dashboard Designer</p>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center hover:shadow-md transition-shadow">
+                    <div class="w-24 h-24 mx-auto rounded-full border-2 border-blue-500 bg-slate-200 mb-3 flex items-center justify-center font-bold text-slate-500 text-xl">MNA</div>
+                    <p class="text-sm font-bold text-slate-700">Mohamad Nor Han Arif</p>
+                    <p class="text-xs text-slate-400 font-medium tracking-wider uppercase mt-0.5">Mechanical Analyst</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+            <h2 class="text-lg font-bold text-slate-700 mb-4 border-b pb-2 flex items-center gap-2">
+                <span>⚙️</span> Real-Time Quality In-Situ Monitoring Hardware
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col justify-between">
+                    <div>
+                        <img src="https://raw.githubusercontent.com/BaqiMahasan/BMIK2124/main/clampmeter.png" alt="Clamp Meter" class="w-full h-40 object-contain bg-white rounded-lg p-2 border mb-3" onerror="this.src='https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?w=300&auto=format&fit=crop&q=80'">
+                        <h4 class="font-bold text-slate-700 text-sm">Digital Clamp Meter</h4>
+                        <p class="text-xs text-slate-500 mt-1">Measures real-time electrical current waveforms safely from a single isolated cable line.</p>
+                    </div>
+                    <span class="mt-3 text-[10px] bg-blue-100 text-blue-700 font-bold px-2 py-0.5 rounded-full w-max uppercase">Electrical Loop</span>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col justify-between">
+                    <div>
+                        <img src="https://raw.githubusercontent.com/BaqiMahasan/BMIK2124/main/thermalcamera.png" alt="Thermal Camera" class="w-full h-40 object-contain bg-white rounded-lg p-2 border mb-3" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=300&auto=format&fit=crop&q=80'">
+                        <h4 class="font-bold text-slate-700 text-sm">Thermal Imaging Camera</h4>
+                        <p class="text-xs text-slate-500 mt-1">Equipped with a microbolometer sensor to log temperature distribution and cooling profile.</p>
+                    </div>
+                    <span class="mt-3 text-[10px] bg-amber-100 text-amber-700 font-bold px-2 py-0.5 rounded-full w-max uppercase">Thermal Array</span>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col justify-between">
+                    <div>
+                        <img src="https://raw.githubusercontent.com/BaqiMahasan/BMIK2124/main/arcanalyzer.png" alt="Arc Analyzer" class="w-full h-40 object-contain bg-white rounded-lg p-2 border mb-3" onerror="this.src='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=300&auto=format&fit=crop&q=80'">
+                        <h4 class="font-bold text-slate-700 text-sm">Arc Welding Analyzer</h4>
+                        <p class="text-xs text-slate-500 mt-1">Tracks structural clamping resistance forces and records localized plasma arc pressure drops.</p>
+                    </div>
+                    <span class="mt-3 text-[10px] bg-emerald-100 text-emerald-700 font-bold px-2 py-0.5 rounded-full w-max uppercase">Stress Analysis</span>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col justify-between">
+                    <div>
+                        <img src="https://raw.githubusercontent.com/BaqiMahasan/BMIK2124/main/lvdt.png" alt="LVDT Sensor" class="w-full h-40 object-contain bg-white rounded-lg p-2 border mb-3" onerror="this.src='https://images.unsplash.com/photo-1537462715879-360eeb61a0bc?w=300&auto=format&fit=crop&q=80'">
+                        <h4 class="font-bold text-slate-700 text-sm">LVDT Displacement Sensor</h4>
+                        <p class="text-xs text-slate-500 mt-1">Employs electromagnetic induction to gauge transient structural warping deflection.</p>
+                    </div>
+                    <span class="mt-3 text-[10px] bg-purple-100 text-purple-700 font-bold px-2 py-0.5 rounded-full w-max uppercase">Displacement</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-50 border p-4 rounded-xl text-center">
+                    <p class="text-xs text-slate-500 font-medium uppercase">Production Target Volume</p>
+                    <p class="text-2xl font-bold text-slate-800 mt-1">500 Parts</p>
+                </div>
+                <div class="bg-slate-50 border p-4 rounded-xl text-center">
+                    <p class="text-xs text-slate-500 font-medium uppercase">Configured Base Emissivity</p>
+                    <p class="text-2xl font-bold text-amber-600 mt-1">0.95 ε</p>
+                </div>
+                <div class="bg-slate-50 border p-4 rounded-xl text-center">
+                    <p class="text-xs text-slate-500 font-medium uppercase">Constant System Travel Speed</p>
+                    <p class="text-2xl font-bold text-blue-600 mt-1">160 mm/min</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 p-5 border border-slate-200 rounded-xl">
+                <h3 class="text-sm font-bold text-slate-700 mb-3">Live Interactive Heat Input Simulator (Travel Speed: 160 mm/min)</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-500 mb-1">Current Input (Amperes)</label>
+                        <input type="number" id="inputI" value="195.2" step="0.1" class="w-full border rounded-lg px-3 py-2 bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-500 mb-1">Arc Voltage Input (Volts)</label>
+                        <input type="number" id="inputV" value="25.3" step="0.1" class="w-full border rounded-lg px-3 py-2 bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <button onclick="runSimulation()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors shadow-sm">
+                        Recalculate Power & Heat
+                    </button>
+                </div>
+                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 border-t pt-4">
+                    <div>
+                        <p class="text-xs text-slate-500 font-medium">Net Electrical Wattage Output (P = V × I):</p>
+                        <p id="resW" class="text-xl font-bold text-slate-800">4938.56 W</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-500 font-medium">Calculated Thermal Heat Input Density:</p>
+                        <p id="resHI" class="text-xl font-bold text-emerald-600">1.852 KJ/mm</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+            <h2 class="text-lg font-bold text-slate-700 mb-4 border-b pb-2 flex items-center gap-2">
+                <span>📊</span> Electrical Analytical Scatter Diagrams (30 Joint Test Matrix)
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                    <div class="mb-2">
+                        <h4 class="font-bold text-slate-700 text-sm">Plot A: Current vs Voltage</h4>
+                        <p class="text-[11px] text-slate-500">Shows arc length adaptation mechanisms.</p>
+                    </div>
+                    <div class="h-64 relative bg-white rounded-lg p-2 border">
+                        <canvas id="scatterA"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                    <div class="mb-2">
+                        <h4 class="font-bold text-slate-700 text-sm">Plot B: Current vs Electrical Power</h4>
+                        <p class="text-[11px] text-slate-500">Shows net torch electrical output amplification.</p>
+                    </div>
+                    <div class="h-64 relative bg-white rounded-lg p-2 border">
+                        <canvas id="scatterB"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                    <div class="mb-2">
+                        <h4 class="font-bold text-slate-700 text-sm">Plot C: Current vs Heat Input Density</h4>
+                        <p class="text-[11px] text-slate-500">Energy deliverable per millimeter step.</p>
+                    </div>
+                    <div class="h-64 relative bg-white rounded-lg p-2 border">
+                        <canvas id="scatterC"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // 30 Sample Dataset array taken exactly from project parameters log
+        const datasets30 = [
+            {i:185.2, v:24.8, p:4592.96, hi:1.722}, {i:192.6, v:25.1, p:4834.26, hi:1.813},
+            {i:178.4, v:24.2, p:4317.28, hi:1.619}, {i:205.8, v:25.9, p:5330.22, hi:1.999},
+            {i:168.3, v:23.7, p:3988.71, hi:1.496}, {i:195.2, v:25.3, p:4938.56, hi:1.852},
+            {i:210.4, v:26.1, p:5491.44, hi:2.059}, {i:182.7, v:24.5, p:4476.15, hi:1.679},
+            {i:220.1, v:26.7, p:5876.67, hi:2.204}, {i:188.5, v:24.7, p:4655.95, hi:1.746},
+            {i:215.3, v:26.5, p:5705.45, hi:2.140}, {i:175.2, v:23.9, p:4187.28, hi:1.570},
+            {i:200.6, v:25.6, p:5135.36, hi:1.926}, {i:165.8, v:23.4, p:3879.72, hi:1.455},
+            {i:225.4, v:27.0, p:6085.80, hi:2.282}, {i:212.5, v:26.3, p:5588.75, hi:2.096},
+            {i:198.3, v:25.4, p:5036.82, hi:1.889}, {i:225.7, v:27.1, p:6116.47, hi:2.294},
+            {i:189.6, v:24.9, p:4721.04, hi:1.770}, {i:235.2, v:28.0, p:6585.60, hi:2.470},
+            {i:175.8, v:24.0, p:4219.20, hi:1.582}, {i:220.4, v:26.8, p:5906.72, hi:2.215},
+            {i:195.5, v:25.3, p:4946.15, hi:1.855}, {i:208.9, v:26.0, p:5431.40, hi:2.037},
+            {i:170.2, v:23.8, p:4050.76, hi:1.519}, {i:230.8, v:27.5, p:6347.00, hi:2.380},
+            {i:185.9, v:24.8, p:4610.32, hi:1.729}, {i:218.3, v:26.6, p:5806.78, hi:2.178},
+            {i:195.0, v:25.2, p:4914.00, hi:1.843}, {i:210.1, v:26.2, p:5504.62, hi:2.064}
+        ];
+
+        // Formula Calculation Logic
+        function runSimulation() {
+            const I = parseFloat(document.getElementById('inputI').value) || 0;
+            const V = parseFloat(document.getElementById('inputV').value) || 0;
+            const P = V * I;
+            const HI = (V * I * 60) / (1000 * 160); // Speed fixed at 160 mm/min
+
+            document.getElementById('resW').innerText = P.toFixed(2) + " W";
+            document.getElementById('resHI').innerText = HI.toFixed(3) + " KJ/mm";
+        }
+
+        // Initialize Scatter Charts once page loading completes
+        window.addEventListener('DOMContentLoaded', () => {
+            const optionsCommon = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { type: 'linear', position: 'bottom', title: { display: true, text: 'Current (Amperes)', color: '#475569', font: { size: 10 } } }
+                }
+            };
+
+            // Plot A Chart
+            new Chart(document.getElementById('scatterA').getContext('2d'), {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Voltage vs Current',
+                        data: datasets30.map(d => ({ x: d.i, y: d.v })),
+                        backgroundColor: '#2563eb'
+                    }]
+                },
+                options: {
+                    ...optionsCommon,
+                    scales: {
+                        ...optionsCommon.scales,
+                        y: { title: { display: true, text: 'Voltage (V)', color: '#475569', font: { size: 10 } } }
+                    }
+                }
+            });
+
+            // Plot B Chart
+            new Chart(document.getElementById('scatterB').getContext('2d'), {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Power vs Current',
+                        data: datasets30.map(d => ({ x: d.i, y: d.p })),
+                        backgroundColor: '#d97706'
+                    }]
+                },
+                options: {
+                    ...optionsCommon,
+                    scales: {
+                        ...optionsCommon.scales,
+                        y: { title: { display: true, text: 'Power (Watts)', color: '#475569', font: { size: 10 } } }
+                    }
+                }
+            });
+
+            // Plot C Chart
+            new Chart(document.getElementById('scatterC').getContext('2d'), {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Heat Input vs Current',
+                        data: datasets30.map(d => ({ x: d.i, y: d.hi })),
+                        backgroundColor: '#059669'
+                    }]
+                },
+                options: {
+                    ...optionsCommon,
+                    scales: {
+                        ...optionsCommon.scales,
+                        y: { title: { display: true, text: 'Heat Input (KJ/mm)', color: '#475569', font: { size: 10 } } }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
